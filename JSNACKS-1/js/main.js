@@ -16,16 +16,58 @@
  */
 
 
+// 1 creazione oggetto array
 
 let giocatore = [
     {
-     cod : makeid(3),
      nome: 'Michael',
      cognome: 'Jordan',
      età: 27,
-     mediaPunti: randomNumber(0, 50),
-     perctiri3punti: randomNumber(0, 100),
+     mediaPunti: randomNumber(),
+     perctiri3punti: randomNumber(),
+     cod : codice(),
     },
 ];
 
 console.log(giocatore);
+
+const{nome, cognome, età, cod} = giocatore[0];
+console.log(nome, cognome, età, cod); 
+
+
+
+
+
+
+
+
+
+
+/***************************************************
+ *               FUNZIONI
+ ***************************************************/
+
+
+// generatore codice 3 numeri e 3 lettere random
+
+ function codice(){
+    const lettere = 'AFGRTOIUEORPCMNDE';
+    const numeri = '234059687124567';
+    let codLettere = '';
+    let codNumeri  = '';
+    for (let i = 0; i < 3; i++) {
+        codLettere += lettere.charAt(Math.floor(Math.random()* lettere.length));
+        codNumeri += numeri.charAt(Math.floor(Math.random()* numeri.length));
+    }
+    return codLettere + codNumeri;
+} 
+
+
+
+
+
+// generatore numeri random
+
+function randomNumber(min, max) {
+    return Math.floor(Math.random() *(max - min + 1) ) + min;
+}
