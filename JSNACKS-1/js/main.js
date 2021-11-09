@@ -16,7 +16,7 @@
  */
 
 
-// 1 creazione oggetto array
+// 1.
 
 let giocatore = [
     {
@@ -31,6 +31,8 @@ let giocatore = [
 
 console.log(giocatore);
 
+
+// 3.
 const{nome, cognome, età, cod} = giocatore[0];
 console.log(nome, cognome, età, cod); 
 
@@ -47,6 +49,8 @@ console.log(nome, cognome, età, cod);
  *               FUNZIONI
  ***************************************************/
 
+
+// 2.
 
 // generatore codice 3 numeri e 3 lettere random
 
