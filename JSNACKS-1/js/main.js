@@ -38,6 +38,25 @@ console.log(nome, cognome, età, cod);
 
 
 
+// 4.
+
+const giocatoriSquadra = [];
+for(let i = 0; i < 10; i++){
+     const team = {
+        nome: 'Michael',
+        cognome: 'Jordan',
+        età: 27,
+        mediaPunti: randomNumber(),
+        perctiri3punti: randomNumber(),
+        cod : codice(),
+     };
+     giocatoriSquadra.push(team);
+}
+
+console.table(giocatoriSquadra);
+
+
+
 
 
 
