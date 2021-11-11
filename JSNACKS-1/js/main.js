@@ -123,7 +123,11 @@ const giocatori = [
 ];
 console.table(giocatori);
 
+// 5. 
 
+const topGiocatori = giocatori.filter((element) => element.mediaPunti > 35 && element.perctiri3punti > 80);
+console.table(topGiocatori);
+console.log(topGiocatori.length);
 
 
 
