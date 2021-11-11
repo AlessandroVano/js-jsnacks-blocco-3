@@ -18,42 +18,110 @@
 
 // 1.
 
-let giocatore = [
+let giocatore = 
     {
      nome: 'Michael',
      cognome: 'Jordan',
      età: 27,
-     mediaPunti: randomNumber(),
-     perctiri3punti: randomNumber(),
-     cod : codice(),
-    },
-];
+     mediaPunti: randomNumber(0, 50),
+     perctiri3punti: randomNumber(0, 100),
+     cod : generazioneCodice(),
+    }
 
-console.log(giocatore);
 
+console.table(giocatore);
 
 // 3.
-const{nome, cognome, età, cod} = giocatore[0];
+const{nome, cognome, età, cod} = giocatore;
 console.log(nome, cognome, età, cod); 
 
 
 
-// 4.
+//4. 
 
-const giocatoriSquadra = [];
-for(let i = 0; i < 10; i++){
-     const team = {
-        nome: 'Michael',
-        cognome: 'Jordan',
+const giocatori = [
+    {
+        nome: 'Lebron',
+        cognome: 'James',
+        età: 36,
+        mediaPunti: randomNumber(0, 50),
+        perctiri3punti: randomNumber(0, 100),
+        cod : generazioneCodice(),
+    },
+    {
+        nome: 'Kevin',
+        cognome: 'Durant',
+        età: 33,
+        mediaPunti: randomNumber(0, 50),
+        perctiri3punti: randomNumber(0, 100),
+        cod : generazioneCodice(),
+    },
+    {
+        nome: 'Shaquille',
+        cognome: 'ONeil',
+        età: 30,
+        mediaPunti:randomNumber(0, 50),
+        perctiri3punti:  randomNumber(0, 100),
+        cod : generazioneCodice(),
+    },
+    {
+        nome: 'Stephen',
+        cognome: 'Curry',
+        età: 25,
+        mediaPunti: randomNumber(0, 50),
+        perctiri3punti:  randomNumber(0, 100),
+        cod : generazioneCodice(),
+    },
+    {
+        nome: 'James',
+        cognome: 'Harden',
+        età: 28,
+        mediaPunti: randomNumber(0, 50),
+        perctiri3punti:  randomNumber(0, 100),
+        cod : generazioneCodice(),
+    },
+    {
+        nome: 'Giannis',
+        cognome: 'Antetokounmpo',
+        età: 32,
+        mediaPunti: randomNumber(0, 50),
+        perctiri3punti:  randomNumber(0, 100),
+        cod : generazioneCodice(),
+    },
+    {
+        nome: 'Kobe',
+        cognome: 'Bryant',
+        età: 32,
+        mediaPunti: randomNumber(0, 50),
+        perctiri3punti:  randomNumber(0, 100),
+        cod : generazioneCodice(),
+    },
+    {
+        nome: 'Kareem',
+        cognome: 'Abdul-Jabbar',
+        età: 74,
+        mediaPunti: randomNumber(0, 50),
+        perctiri3punti:  randomNumber(0, 100),
+        cod : generazioneCodice(),
+    },
+    {
+        nome: 'Magic',
+        cognome: 'Johnson',
         età: 27,
-        mediaPunti: randomNumber(),
-        perctiri3punti: randomNumber(),
-        cod : codice(),
-     };
-     giocatoriSquadra.push(team);
-}
-
-console.table(giocatoriSquadra);
+        mediaPunti: randomNumber(0, 50),
+        perctiri3punti:  randomNumber(0, 100),
+        cod : generazioneCodice(),
+    },
+    {
+        nome: 'Luka',
+        cognome: 'Doncic',
+        età: 27,
+        mediaPunti: randomNumber(0, 50),
+        perctiri3punti:  randomNumber(0, 100),
+        cod : generazioneCodice(),
+    },
+];
+console.table(giocatori);
 
 
 
@@ -73,7 +141,7 @@ console.table(giocatoriSquadra);
 
 // generatore codice 3 numeri e 3 lettere random
 
- function codice(){
+ function generazioneCodice(){
     const lettere = 'AFGRTOIUEORPCMNDE';
     const numeri = '234059687124567';
     let codLettere = '';
